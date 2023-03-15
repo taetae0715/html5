@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>문서 연습 - 폼 요소</title>
+	</head>
+	<body>
+		<h2>폼 요소, 폼 태그, 폼 엘리먼트</h2>
+		<p>폼 요소는 사용자가 웹 브라우저 상에서 데이터를 입력 받아 서버로 전달해 줄 수 있도록 하는 요소로서 UI의 가장 필수적인 요소임</p>
+		<hr>
+		<form action="join.jsp" method="post">
+		  <fieldset id="set1">
+			<legend>***필수 입력***</legend>
+			<label for="id">아이디 : </label>
+			<input type="text" name="id" id="id" autofocus requierd><br><br>
+			<!-- <input type="text" name="id2" id="id2" placeholder="아이디를 입력하세요"><br><br> -->
+
+			<label for="pw">비밀번호 : </label>
+			<input type="password" name="pw" id="pw" requierd><br><br>
+
+			<label for="name">이름 : </label>
+			<input type="text" name="name" id="name"><br><br>
+
+			<label>성별 : </label>&nbsp;
+			<label for="ml1">남</label>
+			<input type="radio" name="ml" id="ml1">&nbsp;&nbsp;&nbsp;
+			<label for="ml2">여</label>
+			<input type="radio" name="ml" id="ml2" checked><br><br>
+
+			<label for="phone">전화번호 : </label>
+			<input type="tel" name="phone" id="phone" requierd><br><br>
+		
+			<label for="email">이메일 : </label>
+			<input type="email" name="email" id="email" requierd><br>
+		</fieldset>
+		<br><br>
+		  <fieldset id="set2">		
+			<legend>(선택 입력)</legend>			
+			<label for="birth">생년월일</label>
+			<input type="date" name="birth" id="birth" requierd><br><br>
+
+			<label>취미 (중복 선택 가능)</label><br>
+			<label for="hb1">게임</label>
+			<input type="checkbox" name="hb1" id="hb1">&nbsp;&nbsp;&nbsp;
+			<label for="hb2">독서</label>
+			<input type="checkbox" name="hb1" id="hb2">&nbsp;&nbsp;&nbsp;
+			<label for="hb3">여행</label>
+			<input type="checkbox" name="hb1" id="hb3">&nbsp;&nbsp;&nbsp;
+			<label for="hb4">운동</label>
+			<input type="checkbox" name="hb1" id="hb4">&nbsp;&nbsp;&nbsp;<br><br>
+
+			<label for="city">지역</label>
+			<select name="city" id="city">
+				<option value="0">선택 안 함</option>
+				<option value="a" selected>고양</option>		
+				<option value="b">파주</option>
+				<option value="c">김포</option>
+				<option value="d">인천</option>
+			</select><br><br>
+
+			<label for="memo">하고 싶은 말 : </label><br>
+			<textarea name="memo" id="memo" rows="10" cols="50"></textarea><br>
+		</fieldset>
+		<hr>		
+			<dv>
+				&nbsp;<input type="submit" value="회원가입">&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="reset" value="초기화">
+			</dv>
+		</form>
+	</body>
+</html>
